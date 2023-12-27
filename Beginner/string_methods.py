@@ -11,6 +11,8 @@ print(hello.count('LL'))
 print(hello.count('ll'))
 print(hello.lower().count('ll'))
 
+#Python is case sensitive
+
 #Additional for string multiplication
 x = 'hello '
 y = 4
