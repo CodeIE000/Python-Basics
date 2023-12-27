@@ -19,3 +19,11 @@ quotient = x // y
 print(quotient)
 
 #Order of Operators
+#BEDMAS
+#Bracket, Exponents, Division, Multiplication, Addition, Subtraction
+#Interger division, and Modulus operators are the lowest in the lowest order
+
+#Proper Data Types
+num = input("Number: ")
+print(int(num) - 5)
+#Need to convert data type as int cannot perform operations with strings
