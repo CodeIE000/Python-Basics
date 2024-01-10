@@ -1,6 +1,8 @@
-#if, elif, else
+#IF, ELIF, ELSE
+
 #Syntax: if condition:
 
+#Demonstration Samples:
 name = input("Name: ")
 
 if name == "Nikolai":

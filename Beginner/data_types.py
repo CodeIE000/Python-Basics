@@ -1,4 +1,4 @@
-#Data Types
+#DATA TYPES
 
 #Int
 -123

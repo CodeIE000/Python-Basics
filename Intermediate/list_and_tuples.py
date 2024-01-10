@@ -1,7 +1,11 @@
-#List and Tuples
+#LISTS AND TUPLES
 
+#Definition:
 #List is an ordered collection
 #Uses brackets
+
+#Demonstration Samples:
+#Lists:
 x = [4, True, "Nikolai"]
 y = 'hello'
 x.append("Dostoevskiy") #Adds the element to the list
@@ -18,13 +22,15 @@ y = x[:] #Takes the original value of x
 x[2] = 'Fyodor'
 print(x[2])
 
+#Notes:
 #Lists are mutable, they can be changes and the elements can be changed
 #They can be updated for the whole program "reference call".
 
 print(x, y)
 
+#Tuples:
 #Tuples are ordered collection but they are immutable or cannot be changed
 #They use parenthesis
 b = (0, 0, 2, 2)
 
-#Note we can use a list within a list or a tuple within a list and so on.
+#Note - We can use a list within a list or a tuple within a list and so on.

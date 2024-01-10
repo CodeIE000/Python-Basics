@@ -1,5 +1,6 @@
 #Comprehensions
 
+#Demonstration Samples:
 x = [x for x in range(5)]
 print(x)
 x = [x + 4 for x in range(5)]

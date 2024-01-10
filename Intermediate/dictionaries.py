@@ -1,6 +1,9 @@
-#Dictionaries 
-#Are key valued pairs
+#DICTIONARIES
 
+#Definition: 
+#Are key valued 
+
+#Demonstration Samples:
 x = {'key': 2}
 print(x['key']) 
 

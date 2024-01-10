@@ -1,6 +1,9 @@
-#Sets
-#Unordered unique collection of elements. A data type
-x = set()
+#SETS
+
+#Definition:
+#Unordered unique collection of elements. A data type.
+
+#Demonstration Samples:
 s = {4, 32, 2, 2}
 u = {1,2,32,5,6,7,8,9,}
 s2 = [1,2,3,4]

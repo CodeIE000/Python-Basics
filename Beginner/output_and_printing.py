@@ -1,4 +1,6 @@
-#Output and Printing
+#OUTPUT AND PRINTING
+
+#Demonstration Samples:
 print("Hello World")
 print('Hello World')
 print('Hello', "World")

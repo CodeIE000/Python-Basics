@@ -1,8 +1,10 @@
-#Chained Conditions
+#CHAINED CONDITIONS
+
+#Definition:
 #Chained conditions is combining multiple conditions together to create one larger condition.
+#Keywords used: and, or, not
 
-#and, or, not
-
+#Demonstration Samples:
 x = 7
 y = 8
 z = 0
