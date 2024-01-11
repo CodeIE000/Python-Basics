@@ -1,6 +1,6 @@
-#Exceptions
+# Exceptions
 
-#Definition:
+# Definition:
 """
 Exceptions are like alarms that signal unexpected errors or 
 problems during code execution. They interrupt the normal flow 
@@ -44,6 +44,20 @@ Key Points:
 
 """
 
-#Demonstration Samples:
-raise Exception('Bad')
+# Demonstration Samples:
+# try:
+#    x = 7 / 0
+# except Exception as e:
+#    print(e)
+# finally:
+#    print("finally")
+
+# try:
+#     age = int(input("How old are you?: "))
+#     print("You are", age, "years old!")
+# except:
+#     print("Invalid Input!")
+    
+
+# raise Exception('Bad')
 

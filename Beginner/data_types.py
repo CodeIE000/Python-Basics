@@ -1,19 +1,19 @@
 #DATA TYPES
 
-#Int
+# Int (kw: int)
 -123
 123
 
-#Float
+# Float (kw: float)
 -123.123
 123.123
 
-#String
+# String (kw: str)
 'Name'
 "Name"
 'name"'
 "name'd"
 
-#Bool
+# Bool (kw: bool)
 True
 False

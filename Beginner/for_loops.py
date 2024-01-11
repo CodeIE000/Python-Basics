@@ -1,4 +1,4 @@
-#For Loops
+# FOR LOOPS
 for i in range(1, 10):
     print(i)
 
@@ -14,7 +14,7 @@ Default - it will start at 0 and stop at whatever number
 you place inside the parenthesis but won't include that number .
 """
 
-#Demonstration Samples:
+# Demonstration Samples:
 for x in [1,2,3,4,5,1,2]:
     print(x)
 

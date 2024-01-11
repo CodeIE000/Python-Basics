@@ -1,6 +1,6 @@
-#SLICE OPERATOR
+# SLICE OPERATOR
 
-#Demonstration Samples:
+# Demonstration Samples:
 x = [0,1,2,3,4,5,6,7,8,9]
 y = ["Hi", "Hello", "Sure", "Cya"]
 z = "Hello"
@@ -15,6 +15,6 @@ print(sliced2)
 print(sliced3)
 print(sliced4)
 
-#Slice order of argument is the same as for loop, Stop, Start-Stop, Start-Stop-Step
-#Stop stops at the specified element but doesn't include that element
-#Default for start is beginning, stop is end, step is one
+# Slice order of argument is the same as for loop, Stop, Start-Stop, Start-Stop-Step
+# Stop stops at the specified element but doesn't include that element
+# Default for start is beginning, stop is end, step is one

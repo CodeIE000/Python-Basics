@@ -1,4 +1,4 @@
-#UNPACK OPERATOR    
+# UNPACK OPERATOR    
 
 """
 In Python, unpack operators are like magic hands that take a collection of 
@@ -17,8 +17,8 @@ Used for dictionaries.
 Unpacks the key-value pairs of the dictionary into separate variables or keyword arguments.
 """
 
-#Demonstration Samples:
-#Unpack operator with list:
+# Demonstration Samples:
+# Unpack operator with list:
 def function(*args, **kwargs):
     pass
 
@@ -26,7 +26,7 @@ x = [1,2,23,345,6,7]
 print(x)
 print(*x)
 
-#With list of tuples:
+# With list of tuples:
 def func(x, y):
     print(x, y)
 
@@ -34,7 +34,7 @@ pairs = [(1,2), (3,4)]
 for pair in pairs:
     func(*pair)
 
-#With dictionaries:
+# With dictionaries:
 def func(x, y):
     print(x, y)
 
@@ -42,5 +42,5 @@ dictionary = [(1,2), (3,4)]
 for dict in dictionary:
     func(**{'x': 2, 'y': 5})
 
-#Note: Double asterisks is used for dictionaries, and single asterisks is used for the rest.
+# Note: Double asterisks is used for dictionaries, and single asterisks is used for the rest.
     

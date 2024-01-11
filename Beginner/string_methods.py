@@ -1,10 +1,10 @@
-#STRING METHODS
+# STRING METHODS
 
-#Define:
-#Method is something with a Dot operator ".upper()"
-#Method is also known as a function.
+# Define:
+# Method is something with a Dot operator ".upper()"
+# Method is also known as a function.
 
-#Demonstration Samples:
+# Demonstration Samples:
 hello = 'heLLo'.upper()
 print(hello)
 hey = 'hEy'
@@ -15,13 +15,13 @@ print(hello.count('LL'))
 print(hello.count('ll'))
 print(hello.lower().count('ll'))
 
-#Note: Python is case sensitive
+# Note: Python is case sensitive
 
-#Additional info for string multiplication:
+# Additional info for string multiplication:
 x = 'hello '
 y = 4
 print(x * y)
 
-#Concatenation:
+# Concatenation:
 z = 'yes'
 print(x + z)

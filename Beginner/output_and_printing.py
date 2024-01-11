@@ -1,6 +1,6 @@
-#OUTPUT AND PRINTING
+# OUTPUT AND PRINTING
 
-#Demonstration Samples:
+# Demonstration Samples:
 print("Hello World")
 print('Hello World')
 print('Hello', "World")

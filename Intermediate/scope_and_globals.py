@@ -1,10 +1,10 @@
-#SCOPE AND GLOBALS
+# SCOPE AND GLOBALS
 
-#Demonstration Samples:
+# Demonstration Samples:
 x = 'Nikolai'
 
 def function(name):
-    global x #Makes the variable for global access. Must only be used in rare cases.
+    global x # Makes the variable for global access. Must only be used in rare cases.
     x = name
 
 print(x)

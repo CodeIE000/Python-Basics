@@ -1,10 +1,10 @@
-#CONDITIONAL OPERATORS:
+# CONDITIONAL OPERATORS:
 """
 Conditional operators are like mini-decision-makers 
 that let you choose between two values based on 
 whether a condition is True or False.
 """
-#Operators:
+# Operators:
 #==
 #!=
 #<=
@@ -12,7 +12,7 @@ whether a condition is True or False.
 #<
 #>
 
-#Demonstration Samples:
+# Demonstration Samples:
 x = 'hello'
 y = "hello"
 print(x == y)

@@ -1,6 +1,6 @@
-#While Loops
+# WHILE LOOPS
 
-#Demonstration Samples:
+# Demonstration Samples:
 x = [3,4,1,2,3,123,123]
 
 i = 0
