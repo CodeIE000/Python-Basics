@@ -8,7 +8,7 @@ import time
 
 delay = 5
 
-operations = {
+OPERATIONS = {
 	'1': 'Addition', 
 	'2': 'Subtraction', 
 	'3': 'Multiplication', 
@@ -17,31 +17,31 @@ operations = {
 	'6': 'Quit'
 }
 
-additions = {
+ADDITIONS = {
 	"23 + 24": 47, 
 	"15 + 37": 52, 
 	"34 + 12": 46
 }
 
-subtractions = {
+SUBTRACTIONS = {
 	"16 - 23": -7,
 	"45 - 34": 11,
 	"23 - 21": 2
 }
 
-multiplications = {
+MULTIPLICATIONS = {
 	"12 x 2": 24,
 	"6 x 7": 42,
 	"8 x 9": 72
 }
 
-divisions = {
+DIVISIONS = {
 	"12 ÷ 3": 4,
 	"36 ÷ 6": 6,
 	"81 ÷ 9": 9
 }
 
-mixed = {
+MIXED = {
 	"3 + 13": 16,
 	"4 - 23": -19,
 	"4 x 9": 36,
@@ -49,16 +49,16 @@ mixed = {
 }
 
 # Introduction Display
-def introDisplay():
+def intro_display():
     print("MATH QUIZ")
 
     print("Choose an operator:")
 
-    for index, operation in operations.items():
+    for index, operation in OPERATIONS.items():
         print(f"{index}. {operation}")
 	
 
-def getUserChoice():
+def get_user_choice():
 	while True:
 		try:
 			user_choice = int(input("=> "))
@@ -68,13 +68,13 @@ def getUserChoice():
 				print("Choose only 1-5")
 		except ValueError:
 			print("Invalid Input!")
-			return getUserChoice()
+			return get_user_choice()
 
 
-def additionQuiz():
+def addition_quiz():
 	item = 1
 	score = 0
-	for question, answer in additions.items():
+	for question, answer in ADDITIONS.items():
 		while True:
 			print(f"Question #{item}")
 			try:
@@ -93,13 +93,13 @@ def additionQuiz():
 			
 	print(f"Finished! Your score is {score}/{item - 1}.")
 	time.sleep(delay)
-	return mainSection()
+	return main_section()
 	
 	
 def subtractionQuiz():
 	item = 1
 	score = 0
-	for question, answer in subtractions.items():
+	for question, answer in SUBTRACTIONS.items():
 		while True:
 			print(f"Question #{item}")
 			try:
@@ -118,13 +118,13 @@ def subtractionQuiz():
 			
 	print(f"Finished! Your score is {score}/{item - 1}.")
 	time.sleep(delay)
-	return mainSection()
+	return main_section()
 	
 
-def multiplicationQuiz():
+def multiplication_quiz():
 	item = 1
 	score = 0
-	for question, answer in multiplications.items():
+	for question, answer in MULTIPLICATIONS.items():
 		while True:
 			print(f"Question #{item}")
 			try:
@@ -143,13 +143,13 @@ def multiplicationQuiz():
 			
 	print(f"Finished! Your score is {score}/{item - 1}.")
 	time.sleep(delay)
-	return mainSection()
+	return main_section()
 	
 	
-def divisionQuiz():
+def division_quiz():
 	item = 1
 	score = 0
-	for question, answer in divisions.items():
+	for question, answer in DIVISIONS.items():
 		while True:
 			print(f"Question #{item}")
 			try:
@@ -168,13 +168,13 @@ def divisionQuiz():
 			
 	print(f"Finished! Your score is {score}/{item - 1}.")
 	time.sleep(delay)
-	return mainSection()
+	return main_section()
 	
 
-def mixedQuiz():
+def mixed_quiz():
 	item = 1
 	score = 0
-	for question, answer in mixed.items():
+	for question, answer in MIXED.items():
 		while True:
 			print(f"Question #{item}")
 			try:
@@ -193,25 +193,25 @@ def mixedQuiz():
 			
 	print(f"Finished! Your score is {score}/{item - 1}.")
 	time.sleep(delay)
-	return mainSection()
+	return main_section()
 	
 
-def mainSection():
-	introDisplay()
-	user_choice = getUserChoice()
+def main_section():
+	intro_display()
+	user_choice = get_user_choice()
 	if user_choice == 1:
-		additionQuiz()
+		addition_quiz()
 	elif user_choice == 2:
 		subtractionQuiz()
 	elif user_choice == 3:
-		multiplicationQuiz()
+		multiplication_quiz()
 	elif user_choice == 4:
-		divisionQuiz()
+		division_quiz()
 	elif user_choice == 5:
-		mixedQuiz()
+		mixed_quiz()
 	elif user_choice == 6:
 		print("Thank you!")
 		sys.exit
 
 
-mainSection()
+main_section()

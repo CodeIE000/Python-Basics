@@ -43,7 +43,7 @@ QUESTIONS = {
 
 def display_menu():
     print("MATH QUIZ")
-    print("Choose an operator:")
+    print("Choose an operation:")
     for index, operation in OPERATIONS.items():
         print(f"{index}. {operation}")
 
