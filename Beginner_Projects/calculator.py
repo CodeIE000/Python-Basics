@@ -2,13 +2,17 @@
 
 import sys
 
+global key
+key = 0
+
 # Dictionaries
 
 OPERATIONS = {
     '1': 'Addition',
     '2': 'Subtraction',
     '3': 'Multiplication',
-    '4': 'Division'
+    '4': 'Division',
+    '5': 'Menu'
 }
 
 CALCULATOR_TYPE = {
@@ -26,10 +30,10 @@ def choice_menu():
     while True:
         try:
             user_type_choice = int(input("=> "))
-            if 0 <= user_type_choice <= len(CALCULATOR_TYPE):
+            if 1 <= user_type_choice <= len(CALCULATOR_TYPE):
                 return user_type_choice
             else:
-                print("Choose only 1 or 2")
+                print(f"Choose only 1 - {len(CALCULATOR_TYPE)}")
                 
         except ValueError:
             print("Type only the number of choice!")
@@ -39,16 +43,16 @@ def choice_menu():
 def manual_calculator():
     while True:
             print("Type your expression below (e.g., 2 + 3)")
-            print("Type 'Q' to quit.")
+            print("Type 'M' to return menu.")
             try:
                 user_input = input("=> ")
-                if user_input.capitalize() == 'Q':
+                if user_input.capitalize() == 'M':
                     return main()
                 else:
                     answer = eval(user_input)
                     print(f"= {answer}")
                 
-            except ValueError:
+            except (SyntaxError, NameError) as e:
                 print("Invalid Expression!")
 
 
@@ -61,7 +65,10 @@ def preselected_operation_menu():
     while True:
         try: 
             user_operation_choice = int(input("=> "))
-            return user_operation_choice
+            if 1 <= user_operation_choice <= len(OPERATIONS):
+                return user_operation_choice
+            else:
+                print(f"Type only 1 - {len(OPERATIONS)}")
         except ValueError:
             print("Type only the number of choice!")
 
@@ -83,6 +90,7 @@ def calculate(user_operation_choice, first_number, second_number):
 
 # Pre-selected operation calculator
 def preselected_calculator(user_operation_choice):
+    global key
     while True:
         if user_operation_choice == 1:
             print("Addition:")
@@ -92,41 +100,52 @@ def preselected_calculator(user_operation_choice):
             print("Multiplication")
         elif user_operation_choice == 4:
             print("Division")
+        elif user_operation_choice == 5:
+            return main()
         try:
             first_number = int(input("First Number: "))
             second_number = int(input("second Number: "))
             answer = calculate(user_operation_choice, first_number, second_number)
             print(f"= {answer}")
             while True:
-                restart = input("Again?[Y/N]: ")
-                if restart.capitalize() == 'Y' or restart.capitalize() == 'N':
-                    if restart.capitalize() == 'Y':
+                restart = input("Again, Change Operation, or Menu?[A, C, M]: ")
+                if restart.capitalize() == 'A' or restart.capitalize() == 'C' or restart.capitalize() == 'M':
+                    if restart.capitalize() == 'A':
                         break
+                    elif restart.capitalize() == 'C':
+                        key = 1
+                        return main()
                     else:
+                        key = 0
                         return main()
                 else:
-                    print("Type only Y or N!")
+                    print("Type only A, C, or M!")
             continue
         except ValueError:
             print("Input only a number!")
     
 # Main function
 def main():
-    print("CALCULATOR")
-    user_choice = choice_menu()
-    if user_choice == 1:
-        manual_calculator()
-        
-    elif user_choice == 2:
+    if key == 0:
+        print("CALCULATOR")
+        user_choice = choice_menu()
+        if user_choice == 1:
+            manual_calculator()
+        elif user_choice == 2:
+            user_operation_choice = preselected_operation_menu()
+            preselected_calculator(user_operation_choice)
+        elif user_choice == 3:
+            print("Thank you!")
+            sys.exit()
+    else:
         user_operation_choice = preselected_operation_menu()
         preselected_calculator(user_operation_choice)
-    elif user_choice == 3:
-        print("Thank you!")
-        sys.exit()
+    
+
 
 if __name__ == "__main__":
     main()
 
 # To-do List
-# 1. Enhance UX and convenience
+# 1. Enhance UX and convenience /
         
